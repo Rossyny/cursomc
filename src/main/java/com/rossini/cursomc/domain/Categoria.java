@@ -19,7 +19,7 @@ public class Categoria implements Serializable{
 	private Integer id;
 	private String nome;
 	
-	
+	//Mapeamento feito na classe Produto pela variavel categorias
 	@ManyToMany(mappedBy = "categorias")
 	private List<Produto> produtos = new ArrayList<>();
 	
