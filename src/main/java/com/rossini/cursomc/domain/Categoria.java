@@ -10,6 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 
+//Serializable serve para facilitar a transferencia de objetos
 @Entity
 public class Categoria implements Serializable{
 	private static final long serialVersionUID = 1L;

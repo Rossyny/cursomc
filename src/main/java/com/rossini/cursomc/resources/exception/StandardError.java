@@ -2,6 +2,8 @@ package com.rossini.cursomc.resources.exception;
 
 import java.io.Serializable;
 
+/*essa classe cria uma exceção personalizada,
+ * com Status (retorno http 200, 300, 400 e 500)*/
 public class StandardError implements Serializable {
 
 	
