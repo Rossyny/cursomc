@@ -12,6 +12,8 @@ import com.rossini.cursomc.services.exceptions.ObjectNotFoundException;
 @Service
 public class PedidoService {
 	
+	
+	
 	@Autowired
 	private PedidoRepository repo;
 
