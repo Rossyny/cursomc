@@ -1,6 +1,7 @@
 package com.rossini.cursomc.services;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,6 +53,11 @@ public class PedidoService {
 		
 	}
 	
+	//busca todos os pedidos (eu não estou usando esse método)
+	public List<Pedido> findAll(){
+		return repo.findAll();
+	}
+	
 	@Transactional
 	public Pedido insert(Pedido obj) {
 		obj.setId(null);
@@ -72,7 +78,7 @@ public class PedidoService {
 			ip.setPedido(obj);
 		}
 		itemPedidoRepository.saveAll(obj.getItens());
-		emailService.sendOrderConfirmationEmail(obj);
+		emailService.sendOrderConfirmationHtmlEmail(obj);
 		return obj;
 	}
 }
